@@ -29,9 +29,7 @@ export const en: Dictionary = {
     ctaSecondary: "Explore services",
     note: "No appointment needed · Open Mon–Sat · Ready in ±15 min",
     imageAlt:
-      "Locksmith Luc smiling while replacing a lock cylinder on a modern black front door",
-    floating: ["Heels & soles", "Keys", "Engraving", "Stamps"],
-  },
+      "Locksmith Luc smiling while replacing a lock cylinder on a modern black front door",  },
   services: {
     tag: "Our services",
     title: "Four crafts, one address",

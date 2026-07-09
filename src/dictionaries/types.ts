@@ -97,7 +97,6 @@ export interface Dictionary {
     ctaSecondary: string;
     note: string;
     imageAlt: string;
-    floating: string[];
   };
   services: {
     tag: string;

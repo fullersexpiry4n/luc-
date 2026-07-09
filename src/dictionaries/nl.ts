@@ -29,9 +29,7 @@ export const nl: Dictionary = {
     ctaSecondary: "Bekijk diensten",
     note: "Geen afspraak nodig · Ma–Za open · Klaar in ±15 min",
     imageAlt:
-      "Slotenmaker Luc vervangt glimlachend een cilinderslot van een moderne zwarte voordeur",
-    floating: ["Hakken & zolen", "Sleutels", "Graveren", "Stempels"],
-  },
+      "Slotenmaker Luc vervangt glimlachend een cilinderslot van een moderne zwarte voordeur",  },
   services: {
     tag: "Onze diensten",
     title: "Vier ambachten, één adres",

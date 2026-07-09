@@ -106,10 +106,6 @@ export function SiteNav({
 
         {/* Mobile menu */}
         <div className="flex items-center gap-2 lg:hidden">
-          <LanguageSwitcher
-            current={locale}
-            ariaLabel={dict.nav.languageLabel}
-          />
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger asChild>
               <Button
@@ -142,7 +138,16 @@ export function SiteNav({
                   </Link>
                 ))}
               </nav>
-              <div className="mt-auto px-4 pb-6">
+              <div className="mt-auto flex flex-col gap-5 px-4 pb-6">
+                <div className="flex items-center justify-between gap-3">
+                  <span className="text-sm font-medium text-muted-foreground">
+                    {dict.nav.languageLabel}
+                  </span>
+                  <LanguageSwitcher
+                    current={locale}
+                    ariaLabel={dict.nav.languageLabel}
+                  />
+                </div>
                 <PillLink
                   href={`/${locale}#contact`}
                   size="lg"

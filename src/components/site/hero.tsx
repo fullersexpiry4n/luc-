@@ -8,7 +8,6 @@ import { Clock, Phone } from "lucide-react";
 import type { Dictionary } from "@/dictionaries";
 import type { Locale } from "@/lib/i18n";
 import { contact } from "@/lib/contact";
-import { serviceIcons, serviceSlugs } from "@/lib/services";
 import { PillLink } from "@/components/site/pill-button";
 import { Badge } from "@/components/ui/badge";
 
@@ -60,24 +59,7 @@ export function Hero({ dict, locale }: { dict: Dictionary; locale: Locale }) {
             "[data-hero='note']",
             { opacity: 0, duration: 0.5 },
             "-=0.2",
-          )
-          .from(
-            "[data-hero='chip']",
-            { scale: 0.6, opacity: 0, duration: 0.55, stagger: 0.08, ease: "back.out(1.7)" },
-            "-=0.4",
           );
-
-        // 2. Floating chips.
-        gsap.utils.toArray<HTMLElement>("[data-hero='chip']").forEach((chip, i) => {
-          gsap.to(chip, {
-            y: i % 2 === 0 ? -10 : 10,
-            duration: 2.6 + i * 0.4,
-            yoyo: true,
-            repeat: -1,
-            ease: "sine.inOut",
-            delay: 1.2,
-          });
-        });
       });
 
       return () => mm.revert();
@@ -102,14 +84,10 @@ export function Hero({ dict, locale }: { dict: Dictionary; locale: Locale }) {
           sizes="100vw"
           className="object-cover object-[72%_center]"
         />
-        {/* Scrims keep the copy readable on top of the photo */}
+        {/* Scrim keeps the copy readable on top of the photo */}
         <div
           aria-hidden="true"
           className="absolute inset-0 bg-linear-to-r from-black/80 via-black/45 to-black/10"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 h-48 bg-linear-to-t from-black/65 to-transparent"
         />
       </div>
 
@@ -167,27 +145,6 @@ export function Hero({ dict, locale }: { dict: Dictionary; locale: Locale }) {
         <p data-hero="note" className="mt-6 text-sm text-white/60">
           {dict.hero.note}
         </p>
-      </div>
-
-      {/* Floating service chips */}
-      <div className="relative mx-auto w-full max-w-6xl px-5 pb-10 sm:px-8">
-        <div className="flex flex-wrap items-center gap-3 sm:gap-5">
-          {serviceSlugs.map((slug, i) => {
-            const Icon = serviceIcons[slug];
-            return (
-              <span
-                key={slug}
-                data-hero="chip"
-                className="hairline soft-shadow inline-flex items-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-medium"
-              >
-                <span className="brand-gradient flex size-6 items-center justify-center rounded-full text-white">
-                  <Icon className="size-3.5" aria-hidden="true" />
-                </span>
-                {dict.hero.floating[i]}
-              </span>
-            );
-          })}
-        </div>
       </div>
     </section>
   );

@@ -22,7 +22,7 @@ export function Logo({
       <span className="brand-gradient flex size-9 items-center justify-center rounded-full text-white shadow-sm">
         <KeyRound className="size-4.5" aria-hidden="true" />
       </span>
-      <span className="font-display text-lg font-bold tracking-tight">
+      <span className="font-display text-lg font-bold tracking-tight whitespace-nowrap">
         Slotenmaker Luc
       </span>
     </Link>

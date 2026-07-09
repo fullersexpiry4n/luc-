@@ -29,9 +29,7 @@ export const fr: Dictionary = {
     ctaSecondary: "Voir les services",
     note: "Sans rendez-vous · Ouvert lun.–sam. · Prêt en ±15 min",
     imageAlt:
-      "Serrurier Luc remplaçant en souriant un cylindre de serrure sur une porte d'entrée noire moderne",
-    floating: ["Talons & semelles", "Clés", "Gravure", "Tampons"],
-  },
+      "Serrurier Luc remplaçant en souriant un cylindre de serrure sur une porte d'entrée noire moderne",  },
   services: {
     tag: "Nos services",
     title: "Quatre métiers, une seule adresse",
